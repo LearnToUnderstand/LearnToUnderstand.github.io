@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- MAD LIB : THE SPIDER  -->
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <link type = "text/css" rel = "stylesheet" href = "mattlib.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fun and quick ad-lib games.">
+	<meta name="keywords" content="madlibs, mad libs, adlib, ad lib, funny">
+  	<meta name="author" content="Matthew">
+    <title>Welcome To Mattlibs!</title>
+</head>
+<body>
+    <a href = 'index.html'>
+        <span class='homeButton'>Home</span></a>
+    <a href='#footer'>
+        <span class='homeButton'>Help</span></a>
+        <a href='lazyRiver.html'>
+        <span class='homeButton'>Start Again!</span></a>
+    <div id = 'wrapper'>
+        <div id = "formwrapper">
+            <form id = "form">
+                <label>Adjective</label>
+                <input id = "w1" type = "text">
+                <label>Something annoying</label>
+                <input type = "text" id = "w2">
+                <label>A liquid</label>
+                <input type = "text" id = "w3">
+                <label>Verb, past tense (ran, threw, counted...)</label>
+                <input type = "text" id = "w4"> 
+                <label>A part of the body</label>
+                <input type = "text" id = "w5">
+                <label>Something you yell loudly</label>
+                <input type = "text" id = "w6">
+                <label>Something that is creepy</label>
+                <input type = "text" id = "w7"> 
+                <label>Verb ending in "ing"</label>
+                <input type = "text" id = "w8">
+            </form>
+            <button type = "button" onclick = "storytime()"> Let's see what we got! </button>
+            </div>  <!--  end formwrapper div -->
+    <!-- HAVE THE BUTTON RETURN A MESSAGE IF A TEXT FIELD IS LEFT UN-TYPED  -->
+            <div id = 'story'> <br /> <br />
+                <h1> Lazy River </h1>
+                <p> It's a sweltering, <span id = 's1'></span> August day.  We decide 
+                to take inner tubes down the river.  Go figure, it's swarming with 
+                <span id = 's2'> </span>.</p>
+                <p> Refreshments such as cold beers, <span id = 's3'> </span> and 
+                wine are floating casually in the cooler, on its own inner tube.  
+                And since that's all we see, that must mean the snacks have already 
+                <span id = 's4'> </span> away in the water. </p>
+                <p> Toads are jumping, mosquitoes are plentiful, crawdads biting at 
+                our <span id = 's5'></span>... this is truly a vacation to remember.  
+                Oh, <span id = 's6'> </span>!  I just saw a <span id = 's7'> </span>!  
+                I'm excited to see what the rest of this week has in store for us.  
+                It's gotta be better than <span id = 's8'> </span>! </p>
+            <h1> THANKS FOR [verb ending in "ing"] MY GAME! </h1>
+                <button onclick = 'location.reload(true)'>Start Again!</button>
+            </div>  <!--end story div-->
+        <script>
+            function storytime() {
+                document.getElementById('formwrapper').style.display = 
+                'none';
+                document.getElementById('helpDiv').style.display = 
+                'none';
+                document.getElementById('story', 'backButton').style.display = 'block';
+                document.getElementById('s1').innerHTML = 
+                    document.getElementById('w1').value;
+                document.getElementById('s2').innerHTML =
+                    document.getElementById('w2').value;
+                document.getElementById('s3').innerHTML =
+                    document.getElementById('w3').value;
+                document.getElementById('s4').innerHTML =
+                    document.getElementById('w4').value;
+                document.getElementById('s5').innerHTML =
+                    document.getElementById('w5').value;
+                document.getElementById('s6').innerHTML =
+                    document.getElementById('w6').value;
+                document.getElementById('s7').innerHTML =
+                    document.getElementById('w7').value;
+                document.getElementById('s8').innerHTML =
+                    document.getElementById('w8').value;
+                document.getElementById('s9').innerHTML =
+                    document.getElementById('w9').value;
+                document.getElementById('s10').innerHTML =
+                    document.getElementById('w10').value;
+                document.getElementById('s11').innerHTML =
+                    document.getElementById('w11').value;
+                document.getElementById('s12').innerHTML =
+                    document.getElementById('w12').value;
+                document.getElementById('s13').innerHTML =
+                    document.getElementById('w13').value;
+                document.getElementById('footer').style.display = 'block';
+                 alert(s1,s2);
+            }
+        </script>
+        <div id = 'helpDiv'> 
+            <hr id='helpDivider'/>
+            <h3>HELP & HINTS</h3><br/>
+            <ul id='helpList'>
+                <li>TIPS:  think outside the box!  With each answer, think of 
+                    scenarios, groups, places and cultures that are not common to you. 
+                <li>NOUN: a person, place or thing.</li>
+                <li>-  Examples:  janitor, ball, house, bathroom, ocean, 
+                    dog, fever... </li><br/><br/>
+                <li>PLURAL NOUN: A person, place or thing, but <em>more than one</em>.</li>
+                <li>-  Examples:  janitors, balls, houses, bathrooms, 
+                    oceans, dogs... </li><br/><br/>
+                <li>ADJECTIVE:  A word that describes a noun.  
+                <li>-  Examples:  fast, hairy, tired, insane, wonderful, 
+                    shiny...</li><br/><br/>
+                <li>VERB:  An action word.  An action you do, or something that is done.
+                <li>-  Hint: DO NOT put "ing" , "s" or "es" on the end.  
+                       (unless that's how it normally is, like "guess, pass, etc...") 
+                    </li>
+                <li>-  Examples:  run, discover, blow, press, yell, think, call
+                    </li><br/><br/>
+                <li>VERB ENDING IN "ING":    
+                <li>-  Examples:  running, discovering, blowing, pressing, 
+                    yelling, galavanting, hallucinating, criticizing, farting, unicycling, ... </li><br/><br/>
+            </ul>
+        </div>  <!-- end helpDiv div  --><a href = '#top'>
+                <span class='homeButton' id='home'>Back To Top</span></a>
+                <div id = 'helpDiv'> 
+            <hr id='helpDivider'/>
+            <h3>HELP & HINTS</h3><br/>
+            <ul id='helpList'>
+                <li>TIPS:  think outside the box!  With each answer, think of 
+                    scenarios, groups, places and cultures that are not common to you. 
+                <li>NOUN: a person, place or thing.</li>
+                <li>-  Examples:  janitor, ball, house, bathroom, ocean, 
+                    dog, fever... </li><br/><br/>
+                <li>PLURAL NOUN: A person, place or thing, but <em>more than one</em>.</li>
+                <li>-  Examples:  janitors, balls, houses, bathrooms, 
+                    oceans, dogs... </li><br/><br/>
+                <li>ADJECTIVE:  A word that describes a noun.  
+                <li>-  Examples:  fast, hairy, tired, insane, wonderful, 
+                    shiny...</li><br/><br/>
+                <li>VERB:  An action word.  An action you do, or something that is done.
+                <li>-  Hint: DO NOT put "ing" , "s" or "es" on the end.  
+                       (unless that's how it normally is, like "guess, pass, etc...") 
+                    </li>
+                <li>-  Examples:  run, discover, blow, press, yell, think, call
+                    </li><br/><br/>
+                <li>VERB ENDING IN "ING":    
+                <li>-  Examples:  running, discovering, blowing, pressing, 
+                    yelling, galavanting, hallucinating, criticizing, farting, unicycling, ... </li><br/><br/>
+            </ul>
+        </div>  <!-- end helpDiv div  -->
+        <a href = '#top'>
+            <span class='homeButton' id='home'>Back To Top</span></a>
+            <span class='homeButton'>
+                <a href='../index.html'>Back to my Main Page</a>
+
+    </div> <!--end wrapper div-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

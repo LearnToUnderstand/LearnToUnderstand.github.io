@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang = 'en-us'>
+    <head>
+        <meta charset='UTF-8'>
+        <link type = "text/css" rel = "stylesheet" href = "mattlib.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Fun and quick ad-lib games.">
+	    <meta name="keywords" content="madlibs, mad libs, adlib, ad lib, funny">
+      	<meta name="author" content="Matthew">
+        <title>Difficult People</title>
+    </head>
+    <body>
+        <span id='top'></span>
+        <div id = 'wrapper'>
+            <a href = 'index.html'>
+                <span class='homeButton'>Home</span></a>
+            <a href='#helpDiv'>
+                <span class='homeButton'>Help</span></a>
+            <a href='difficultPeople.html'>
+                <span class='homeButton'>Start Again!</span></a>
+            <div id = "formwrapper">
+                <form id = "form">
+                    <label>A verb</label>
+                    <input id = "w1" type = "text">
+                    <label>An emotion or feeling</label>
+                    <input type = "text" id = "w2">
+                    <label>An adjective (a pleasant one)</label>
+                    <input type = "text" id = "w3">
+                    <label>A thing</label>
+                    <input type = "text" id = "w4"> 
+                    <label>A verb</label>
+                    <input type = "text" id = "w5">
+                    <label>A verb</label>
+                    <input type = "text" id = "w6">
+                    <label>An emotion or feeling</label>
+                    <input type = "text" id = "w7"> 
+                    <label>A thing</label>
+                    <input type = "text" id = "w8">
+                    <label>A verb</label>
+                    <input type = "text" id = "w9">
+                    <label>A verb</label>
+                    <input type = "text" id = "w10">
+                    <label>A thing</label>
+                    <input type = "text" id = "w11"> 
+                    <label>A thing</label>
+                    <input type = "text" id = "w12">
+                    <label>A thing, plural</label>
+                    <input type = "text" id = "w13">
+                    <label>Adjective (something bad)<label>
+                    <input type = "text" id = "w14">
+                    <label>A verb<label>
+                    <input type = "text" id = "w15">
+                    <label>Something you say to someone you're arguing with (1-5 words)<label>
+                    <input type = "text" id = "w16">
+                    <label>Verb, ending in "ing"<label>
+                    <input type = "text" id = "w17">
+                    <label>Verb, ending in "ing"<label>
+                    <input type = "text" id = "w18">
+                    <label>A verb<label>
+                    <input type = "text" id = "w19">
+                    <label>Adjective, ending in "ly"<label>
+                    <input type = "text" id = "w20">
+                    <label>A verb<label>
+                    <input type = "text" id = "w21">
+                </form>
+                <button type = "button" onclick = "storytime()"> 
+                    LET'S TURN THESE WORDS INTO A STORY!
+                </button>
+            </div>  <!--  end formwrapper div -->
+            <script>
+                function storytime() {
+                    document.getElementById('formwrapper').style.display = 
+                    'none';
+                    document.getElementById('helpDiv').style.display = 
+                    'none';
+                    document.getElementById('story').style.display = 'block';
+                    document.getElementById('s1').innerHTML = 
+                        document.getElementById('w1').value;
+                    document.getElementById('s2').innerHTML =
+                        document.getElementById('w2').value;
+                    document.getElementById('s3').innerHTML =
+                        document.getElementById('w3').value;
+                    document.getElementById('s4').innerHTML =
+                        document.getElementById('w4').value;
+                    document.getElementById('s5').innerHTML =
+                        document.getElementById('w5').value;
+                    document.getElementById('s6').innerHTML =
+                        document.getElementById('w6').value;
+                    document.getElementById('s7').innerHTML =
+                        document.getElementById('w7').value;
+                    document.getElementById('s8').innerHTML =
+                        document.getElementById('w8').value;
+                    document.getElementById('s9').innerHTML =
+                        document.getElementById('w9').value;
+                    document.getElementById('s10').innerHTML =
+                        document.getElementById('w10').value;
+                    document.getElementById('s11').innerHTML =
+                        document.getElementById('w11').value;
+                    document.getElementById('s12').innerHTML =
+                        document.getElementById('w12').value;
+                    document.getElementById('s13').innerHTML =
+                        document.getElementById('w13').value;
+                    document.getElementById('s14').innerHTML =
+                        document.getElementById('w14').value;
+                    document.getElementById('s15').innerHTML =
+                        document.getElementById('w15').value;
+                    document.getElementById('s16').innerHTML =
+                        document.getElementById('w16').value;
+                    document.getElementById('s17').innerHTML =
+                        document.getElementById('w17').value;
+                    document.getElementById('s18').innerHTML =
+                        document.getElementById('w18').value;
+                    document.getElementById('s19').innerHTML =
+                        document.getElementById('w19').value;
+                    document.getElementById('s20').innerHTML =
+                        document.getElementById('w20').value;
+                    document.getElementById('s21').innerHTML =
+                        document.getElementById('w21').value;
+                }
+            </script>
+        <div id='story'>  
+            <h1>HOW TO DEAL WITH DIFFICULT PEOPLE</h1><br/><br/>
+            <p>1. <span id='s1'>verb</span>. It's the number one step in dealing 
+                with "unreasonable" people. Everyone wants to feel <span id='s2'></span>. 
+                No progress can take place until the other person feels acknowledged. 
+                While you're listening, really focus on what the other person is saying, 
+                not what you want to say next.
+            </p>
+            <p>2.  Stay <span id='s3'></span>. When a situation is emotionally charged, 
+                it's easy to get caught up in the <span id='s4'></span> of the moment. 
+                Monitor your breathing. Try to take some slow, deep breaths. 
+            </p>
+            <p>3.  Don’t <span id='s5'></span>. You don't know what the other person 
+                is going through. 
+            </p>
+            <p>4.  <span id='s6'></span> respect and dignity toward the other person. 
+                No matter how a person is treating you, showing <span id='s7'></span> 
+                will not help productively resolve the situation. 
+            </p>
+            <p>5.  Look for the hidden <span id='s8'></span>. What is this person 
+                really trying to gain? What is this person trying to <span id='s9'></span>?
+                Look for others around you who might be able to help. If you’re at 
+                work and there’s an irate customer, quickly <span id='s10'></span> 
+                to see if a <span id='s11'></span> is close by. 
+            </p>
+            <p>6.  Don't demand <span id='s12'></span> or <span id='s13'></span>. 
+                For example, telling someone who's upset to be quiet and calm down 
+                will just make him or her <span id='s14'></span>. Instead, ask the 
+                person what they are upset about, and allow them to <span id='s15'>
+                </span>. 
+            </p>
+            <p>7.  Saying, "I understand," usually makes things worse. Instead, say, 
+                “<span id='s16'></span>”. 
+            </p>
+            <p>8.  Avoid <span id='s17'></span>, as this may look like you are 
+                <span id='s18'></span> the person. Similarly, humor can sometimes 
+                lighten the mood, but more often than not, it’s risky and it may 
+                <span id='s19'></span>. 
+            </p>
+            <p>9.  Don’t act <span id='s20'></span>. This is tough. You’re naturally 
+                not enjoying the other person saying nasty things or things that you 
+                know aren’t true. You’re going to want to <span id='s21'></span> yourself. 
+                But the other person is so emotionally revved up, it’s not going to help. 
+                Remember, this is not about you . Don’t take it personally. 
+            </p>
+        </div> <!--end story div-->
+        <div id = 'helpDiv'> 
+            <hr id='helpDivider'/>
+            <h3>HELP & HINTS</h3><br/>
+            <ul id='helpList'>
+                <li>TIPS:  think outside the box!  With each answer, think of 
+                    scenarios, groups, places and cultures that are not common to you. 
+                <li>NOUN: a person, place or thing.</li>
+                <li>-  Examples:  janitor, ball, house, bathroom, ocean, 
+                    dog, fever... </li><br/><br/>
+                <li>PLURAL NOUN: A person, place or thing, but <em>more than one</em>.</li>
+                <li>-  Examples:  janitors, balls, houses, bathrooms, 
+                    oceans, dogs... </li><br/><br/>
+                <li>ADJECTIVE:  A word that describes a noun.  
+                <li>-  Examples:  fast, hairy, tired, insane, wonderful, 
+                    shiny...</li><br/><br/>
+                <li>VERB:  An action word.  An action you do, or something that is done.
+                <li>-  Hint: DO NOT put "ing" , "s" or "es" on the end.  
+                       (unless that's how it normally is, like "guess, pass, etc...") 
+                    </li>
+                <li>-  Examples:  run, discover, blow, press, yell, think, call
+                    </li><br/><br/>
+                <li>VERB ENDING IN "ING":    
+                <li>-  Examples:  running, discovering, blowing, pressing, 
+                    yelling, galavanting, hallucinating, criticizing, farting, unicycling, ... </li><br/><br/>
+            </ul>
+        </div>  <!-- end helpDiv div  -->            <a href = '#top'>
+                <span class='homeButton' id='home'>Back To Top</span>
+            </a>
+        </div> <!--  end wrapper div  -->
+    </body>
+</html>
+
+
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <link type = "text/css" rel = "stylesheet" href = "madlib.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fun and quick ad-lib games.">
+	<meta name="keywords" content="madlibs, mad libs, adlib, ad lib, funny">
+  	<meta name="author" content="Matthew">
+    <title>Welcome To Mattlibs!</title>
+</head>
+    <body>
+        <div id = 'wrapper'>
+        <div id = 'nav'> <span id = 'menu'>Menu</span>
+            <div id = 'navMenu'>
+                <a href = 'index.html'>
+                <button type='button'>Home</button></a>
+                <a href = 'spider.html'>
+                <button type='button'>Spider</button></a>
+                <a href = 'carnival.html'>
+                <button type='button'>Carnival</button></a>
+                <a href = 'programWebsite.html'>
+                <button type='button'>Program A Website</button></a>
+                <a href = 'lazyRiver.html'>
+                <button type='button'>Lazy River</button></a>
+                <a href = 'wreath.html'>
+                <button type='button'>Wreath Making</button></a>
+                <a href = 'difficultPeople.html'>
+                <button type='button'>Dealing With Difficult People</button></a>
+            </div>  <!-- end navMenu div  -->
+        </div>  <!--  end nav div  -->
+        <div id = 'carnivalStory'>
+        <br /> <br /> <br />
+        <h1> The Day At The Carnival! </h1>
+        <p> We went to the Carnival yesterday.  
+To be honest, it was pretty <span id='w1'></span>.  
+You pay a lot of money, compared to the value 
+that you get from the rides and <span id = 'w2'></span>.  
+The employees mostly seemed like they didn't 
+care about you one bit, and they didn't really 
+convince me that they love what they do.  
+The rides make you wonder how good the 
+maintenance staff is, when you look at the 
+condition of the machines.  
+
+Of course, everybody loves the carnival food, 
+if you want to call it food.  
+I wonder how disguisted I'd be if I were to research 
+the nutritional information.  Do you think that 
+the employees eat that stuff all the time?
+
+It was very crowded, and the rides were crappy.  
+The house of mirrors took about two minutes to get through, 
+and the fastest rides made me want to fall asleep.  
+The whole thing costed me 3 hours of my life and $60 
+of my hard earned money.  While we were there we 
+got in line for two different rides that happened to 
+break down after we'd been waiting for over 10 minutes.  
+
+The bumper cars seemed like they were going to fall 
+apart any minute, and the sledge hammer game hit the 
+bell at the top even when a 8 year old girl swung it!  
+Not to mention the water pistol games had no accuracy 
+whatsoever, while the fish bowl pingpong ball game 
+made you wonder what tricks they were playing on you...
+
+In short, I would not recommend traveling carnivals 
+to a friend, and I can't believe that so many people 
+still love those things.  Don't say I didn't warn you!   
+        <h1> THANKS FOR PLAYING! </h1>
+        <button onclick = 'location.reload(true)'>Start Again!</button>
+        </div>  <!--  end story div  -->
+        <script>
+            var choice1 = confirm('Would you like to play a word game? I\'ll ask you for one word at a time, and we\'ll make a story together! (Don\'t click the checkbox)');
+            if (choice1 === false) {
+                alert('Good.  I\'m not in mood right now anyway.');
+            }
+            else {
+                var ans1 = prompt('Let me have an adjective');
+                var ans2 = prompt('Plural Noun');
+                var ans3 = prompt('Name a city');
+                var ans4 = prompt('Name a funny sound'); 
+                var ans5 = prompt('
+                var choice2 = 
+                confirm('Press OK for the story, or CANCEL to start over.');
+                if (choice2 === true);
+                    document.getElementById('helpDiv').style.display = 
+                    'none';
+                    document.getElementById('story').style.display = 'block';
+                    document.getElementById('w1').innerHTML =
+                        document.getElementById('ans1').value;
+                    document.getElementById('w2').innerHTML =
+                        document.getElementById('ans2').value;
+                    document.getElementById('w3').innerHTML =
+                        document.getElementById('ans3').value;
+                    document.getElementById('w4').innerHTML =
+                        document.getElementById('ans4').value;
+                    document.getElementById('w5').innerHTML =
+                        document.getElementById('ans5').value;
+                    document.getElementById('w6').innerHTML =
+                        document.getElementById('ans6').value;
+                    document.getElementById('w7').innerHTML =
+                        document.getElementById('ans7').value;
+                    document.getElementById('w8').innerHTML =
+                        document.getElementById('ans8').value;
+                    document.getElementById('w9').innerHTML =
+                        document.getElementById('ans9').value;
+                    document.getElementById('w10').innerHTML =
+                        document.getElementById('ans10').value;
+                    document.getElementById('w11').innerHTML =
+                        document.getElementById('ans11').value;
+                    document.getElementById('w12').innerHTML =
+                        document.getElementById('ans12').value;
+                    document.getElementById('w13').innerHTML =
+                        document.getElementById('ans13').value;
+// these should be converted to a loop?
+// REMEMBER TO USE THE SYSTEM FROM 'PROGRAM WEBSITE' javascript TO SHOW THE STORY ONLY AFTER THE QUESTIONS ARE DONE.  (DISPLAY: NONE, DISPLAY: BLOCK)
+            };
+        </script>
+                <button onclick = 'location.reload(true)'>Start Again!</button>
+        <div id = 'helpDiv'> 
+            <hr id='helpDivider'/>
+            <h3>HELP & HINTS</h3><br/>
+            <ul id='helpList'>
+                <li>TIPS:  think outside the box!  With each answer, think of 
+                    scenarios, groups, places and cultures that are not common to you. 
+                <li>NOUN: a person, place or thing.</li>
+                <li>-  Examples:  janitor, ball, house, bathroom, ocean, 
+                    dog, fever... </li><br/><br/>
+                <li>PLURAL NOUN: A person, place or thing, but <em>more than one</em>.</li>
+                <li>-  Examples:  janitors, balls, houses, bathrooms, 
+                    oceans, dogs... </li><br/><br/>
+                <li>ADJECTIVE:  A word that describes a noun.  
+                <li>-  Examples:  fast, hairy, tired, insane, wonderful, 
+                    shiny...</li><br/><br/>
+                <li>VERB:  An action word.  An action you do, or something that is done.
+                <li>-  Hint: DO NOT put "ing" , "s" or "es" on the end.  
+                       (unless that's how it normally is, like "guess, pass, etc...") 
+                    </li>
+                <li>-  Examples:  run, discover, blow, press, yell, think, call
+                    </li><br/><br/>
+                <li>VERB ENDING IN "ING":    
+                <li>-  Examples:  running, discovering, blowing, pressing, 
+                    yelling, galavanting, hallucinating, criticizing, farting, unicycling, ... </li><br/><br/>
+            </ul>
+        </div>  <!-- end helpDiv div  -->        </div> <!--end wrapper div-->
+
+    </body>
+</html>
+
+

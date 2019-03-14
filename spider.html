@@ -1,0 +1,162 @@
+<!-- MAD LIB : SPIDERS  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <link type = "text/css" rel = "stylesheet" href = "mattlib.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fun and quick ad-lib games.">
+	<meta name="keywords" content="madlibs, mad libs, adlib, ad lib, funny">
+  	<meta name="author" content="Matthew">
+    <title>Spiders | Mattlibs</title>
+</head>
+<body>
+    <div id = 'wrapper'>
+        <a href = 'index.html'>
+            <span class='homeButton'>Home</span>
+        </a>
+        <a href='#helpDiv'>
+            <span class='homeButton'>Help</span>
+        </a>
+        <a href='news.html'>
+            <span class='homeButton'>Start Again!</span>
+        </a>
+        <div id = "summary">
+        <br />
+        </div> <!--end summary div-->
+        <div id = "formwrapper"><hr/>
+            <form id = "form">
+                <label>Plural Noun</label>
+                <input id = "w1" type = "text">
+                <label>A Number</label>
+                <input type = "text" id = "w2">
+                <label>Something gooey and nasty</label>
+                <input type = "text" id = "w3">
+                <label>Some place in the world</label>
+                <input type = "text" id = "w4"> 
+                <label>Verb, past tense</label>
+                <input type = "text" id = "w5">
+                <label>Verb, past tense</label>
+                <input type = "text" id = "w6">
+                <label>A thing, plural form</label>
+                <input type = "text" id = "w7"> 
+                <label>A thing</label>
+                <input type = "text" id = "w8">
+                <label>A thing</label>
+                <input type = "text" id = "w9">
+                <label>Adjective</label>
+                <input type = "text" id = "w10">
+                <label>A thing</label>
+                <input type = "text" id = "w11"> 
+                <label>Adjective</label>
+                <input type = "text" id = "w12">
+                <label>Adjective</label>
+                <input type = "text" id = "w13">
+            </form>
+            <button 
+                class='homeButton' 
+                type = "button" 
+                onclick = "storytime()"> 
+                Let's see what we got! 
+            </button>
+        </div>  <!--  end formwrapper div -->
+        <div id = "story">
+            <h1> SPIDERS </h1>
+		    <p> Spiders are air-breathing <span id='s1'></span> that have 
+            <span id='s2'></span> legs and fangs that inject <span id='s3'></span>. 
+            They are the largest order of arachnids and rank seventh in total 
+            species diversity among all other orders of organisms. </p>
+
+            <p>Spiders are found worldwide on every continent except for 
+            <span id='s4'></span>, and have become established in nearly every 
+            habitat, with the exceptions of air and sea. </p>
+
+            <p>As of November 2015, at least 45,700 types of spiders have been 
+            <span id='s5'></span>. However, there has been disagreement 
+            within the scientific community as to how all these different types 
+            should be <span id='s6'></span> </p>
+            <p>Physically, spiders differ from other arthropods in that the usual 
+            body segments are fused into two <span id='s7'></span>, the 
+            <span id='s8'></span> and the <span id='s9'></span>, and joined by 
+            a small <span id='s10'></span> <span id='s11'></span>.</p>
+            <p>   As there is so much to say about spiders, the bottom line is:  
+            spiders are <span id='s12'></span>.  They help keep the annoying bug 
+            population down, and some are even cute!</p>
+            <p> (check out pictures of the bold jumping spider!)<span id='s12'>
+            </span>. </p>
+            <h1> THANKS FOR [verb ending in "ing"] MY GAME! </h1>
+            </div>  <!-- end story div  -->
+            <script>
+                function storytime() {
+                    document.getElementById('formwrapper').style.display = 
+                    'none';
+                    document.getElementById('helpDiv').style.display = 
+                    'none';
+                    document.getElementById('story', 'backButton').style.display = 'block';
+                    document.getElementById('s1').innerHTML = 
+                        document.getElementById('w1').value;
+                    document.getElementById('s2').innerHTML =
+                        document.getElementById('w2').value;
+                    document.getElementById('s3').innerHTML =
+                        document.getElementById('w3').value;
+                    document.getElementById('s4').innerHTML =
+                        document.getElementById('w4').value;
+                    document.getElementById('s5').innerHTML =
+                        document.getElementById('w5').value;
+                    document.getElementById('s6').innerHTML =
+                        document.getElementById('w6').value;
+                    document.getElementById('s7').innerHTML =
+                        document.getElementById('w7').value;
+                    document.getElementById('s8').innerHTML =
+                        document.getElementById('w8').value;
+                    document.getElementById('s9').innerHTML =
+                        document.getElementById('w9').value;
+                    document.getElementById('s10').innerHTML =
+                        document.getElementById('w10').value;
+                    document.getElementById('s11').innerHTML =
+                        document.getElementById('w11').value;
+                    document.getElementById('s12').innerHTML =
+                        document.getElementById('w12').value;
+                    document.getElementById('s13').innerHTML =
+                        document.getElementById('w13').value;
+                     alert(s1,s2);
+                }
+            </script>
+        <div id = 'helpDiv'> 
+            <hr id='helpDivider'/>
+            <h3>HELP & HINTS</h3><br/>
+            <ul id='helpList'>
+                <li>TIPS:  think outside the box!  With each answer, think of 
+                    scenarios, groups, places and cultures that are not common to you. 
+                <li>NOUN: a person, place or thing.</li>
+                <li>-  Examples:  janitor, ball, house, bathroom, ocean, 
+                    dog, fever... </li><br/><br/>
+                <li>PLURAL NOUN: A person, place or thing, but <em>more than one</em>.</li>
+                <li>-  Examples:  janitors, balls, houses, bathrooms, 
+                    oceans, dogs... </li><br/><br/>
+                <li>ADJECTIVE:  A word that describes a noun.  
+                <li>-  Examples:  fast, hairy, tired, insane, wonderful, 
+                    shiny...</li><br/><br/>
+                <li>VERB:  An action word.  An action you do, or something that is done.
+                <li>-  Hint: DO NOT put "ing" , "s" or "es" on the end.  
+                       (unless that's how it normally is, like "guess, pass, etc...") 
+                    </li>
+                <li>-  Examples:  run, discover, blow, press, yell, think, call
+                    </li><br/><br/>
+                <li>VERB ENDING IN "ING":    
+                <li>-  Examples:  running, discovering, blowing, pressing, 
+                    yelling, galavanting, hallucinating, criticizing, farting, unicycling, ... </li><br/><br/>
+            </ul>
+        </div>  <!-- end helpDiv div  -->
+    </div> <!--end wrapper div-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
