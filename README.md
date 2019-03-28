@@ -7,10 +7,10 @@ with the intention of creating a hilarious story and a fun time with friends (or
 
 
 
-My computer science journey began with HTML, CSS and JavaScript. 
+My computer science journey began with HTML, CSS and JavaScript back in mid-2017. 
 I am currently learning:
-  Salesforcd and Apex programming
   Python
   Node.js
-  AWS
+  AWS  (1 certificate acquired already)
+  Salesforce and Apex programming
   
