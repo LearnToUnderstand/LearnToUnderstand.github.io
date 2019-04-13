@@ -6,5 +6,5 @@ Help is at the bottom of every page.
 
 The website link for this page is: 
 
-www.learntounderstand.github.io
+https://learntounderstand.github.io
 
