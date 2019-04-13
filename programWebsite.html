@@ -108,14 +108,14 @@
                 <div id = 'madDiv18'>
                     <h2> A verb (something crazy) </h2>
                     <input id = 'ans17' type = 'text'></input>
-                    <button type = 'button' onclick = 'story()' >  Let's Go! </button>
+                    <button type = 'button' onclick = 'madDiv19()' >  One more! </button>
                 </div>  <!--  end madDiv18 -->                      
-<!--               <div id = 'madDiv19'>
-                    <h2> Let's make a story together </h2>
-                    <input id = 'ans18' type = 'text'></input>
-                    <button type = 'button' onclick = 'story()' >  Let's Go! </button>
-                </div>  <!--  end madDiv19 
-                <div id = 'madDiv20'>
+               <div id = 'madDiv19'>
+                    <h2> A verb, ending in "ing" </h2>
+                    <input id = 'ans18' type = 'text' onkeyup= "this.value = this.value.toUpperCase()"></input>
+                    <button type = 'button' onclick = 'story()'  >  Let's Go! </button>
+                </div>  <!--  end madDiv19 -->
+<!--                <div id = 'madDiv20'>
                     <h2> Let's make a story together </h2>
                     <input id = 'ans19' type = 'text'></input>
                     <button type = 'button' onclick = 'story()' >  Let's Go! </button>
@@ -152,7 +152,7 @@
             <p> Above all: take it easy, have fun with the journey and 
                 <span id='w17'></span> what you love. </p>
 
-            <h1> THANKS FOR [verb ending in "ing"] MY GAME! </h1>
+            <h1> THANKS FOR <span id='w18' ></span> MY GAME!</h1>
             </div>  <!-- end story div -->
             </div>  <!--  end main div  -->
             <script> 
@@ -224,10 +224,10 @@
                     document.getElementById('madDiv17').style.display = 'none';
                     document.getElementById('madDiv18').style.display = 'block';
                 };
-/*                function madDiv19() { 
+                function madDiv19() { 
                     document.getElementById('madDiv18').style.display = 'none';
                     document.getElementById('madDiv19').style.display = 'block';
-                };  */
+                };  
                 function story() { 
                     document.getElementById('helpDiv').style.display = 
                     'none';
