@@ -104,7 +104,7 @@ hr {
 #homeIntro {
     width: 90%; 
     margin: 10px auto;
-    text-align: left;   
+/*    text-align: left; */  
 }
 
 button {
@@ -165,10 +165,11 @@ button {
 }
 
 p {
-    margin: 10px auto; 
+    margin: 2em auto; 
     width: 90%; 
     font-size: 25px;
-    line-height: 150%; 
+    line-height: 200%; 
+    text-align: left; 
 }
 
 h3 {
