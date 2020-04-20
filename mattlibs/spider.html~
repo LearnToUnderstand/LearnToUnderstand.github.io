@@ -1,0 +1,149 @@
+<!-- MAD LIB : SPIDERS  -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type = "text/css" rel = "stylesheet" href = "madlib.css">
+    </head>
+    <body>
+        <div id = 'wrapper'>
+                <a href = 'index.html'>
+                <span class='homeButton'>Home</span></a>            
+                <div id = "summary">
+                <br />
+            </div> <!--end summary div-->
+            <div id = "formwrapper"><hr/>
+                <form id = "form">
+                    <label>Plural Noun</label>
+                    <input id = "w1" type = "text">
+                    <label>A Number</label>
+                    <input type = "text" id = "w2">
+                    <label>Something gooey and nasty</label>
+                    <input type = "text" id = "w3">
+                    <label>A place</label>
+                    <input type = "text" id = "w4"> 
+                    <label>Verb, past tense</label>
+                    <input type = "text" id = "w5">
+                    <label>Verb, past tense</label>
+                    <input type = "text" id = "w6">
+                    <label>Plural Noun</label>
+                    <input type = "text" id = "w7"> 
+                    <label>Noun</label>
+                    <input type = "text" id = "w8">
+                    <label>Noun</label>
+                    <input type = "text" id = "w9">
+                    <label>Adjective</label>
+                    <input type = "text" id = "w10">
+                    <label>Noun</label>
+                    <input type = "text" id = "w11"> 
+                    <label>Adjective</label>
+                    <input type = "text" id = "w12">
+                </form>
+                <button type = "button" onclick = "storytime()"> Let's see what we got! </button>
+            </div>  <!--  end formwrapper div -->
+            <div id = "story">
+                <h1> SPIDERS </h1>
+		<p> Spiders (order Araneae) are air-breathing <span id='s1'></span>
+ that 
+have <span id='s2'></span> legs and fangs that inject <span id='s3'></span>. They are the 
+largest order of arachnids and rank seventh in total species diversity 
+among all other orders of organisms. </p>
+
+<p>Spiders are found worldwide on every continent except for <span id='s4'></span>, 
+and have become established in nearly every 
+habitat with the exceptions of air and sea. </p>
+
+<p>As of November 2015, at least 45,700 spider species, and 113 families have 
+been <span id='s5'></span> by taxonomists. However, there has been disagreement 
+within the scientific community as to how all these families should be 
+<span id='s6'></span>, as evidenced by the over 20 different classifications 
+that have been proposed since 1900. </p>
+<p> Anatomically, spiders differ from other arthropods in that the usual body 
+segments are fused into two <span id='s7'></span>, the <span id='s8'></span>
+ and <span id='s9'></span>, and joined by a small, <span id='s10'></span> <span
+id='s11'></span>.  Unlike insects, spiders do not have antennae.</p>
+<p>   As there is so much to say about spiders, the bottom line is:  spiders are awesome.
+The help keep the annoying bug population down, and ones like the Brazilian Wandering 
+and the Bold Jumping Spiders are what make this world so fantastically <span id='s12'>
+</span>. </p>
+            <script>
+                function storytime() {
+                    document.getElementById('formwrapper').style.display = 
+                    'none';
+                    document.getElementById('summary').style.display = 
+                    'none';
+                    document.getElementById('story', 'backButton').style.display = 'block';
+                    document.getElementById('s1').innerHTML = 
+                        document.getElementById('w1').value;
+                    document.getElementById('s2').innerHTML =
+                        document.getElementById('w2').value;
+                    document.getElementById('s3').innerHTML =
+                        document.getElementById('w3').value;
+                    document.getElementById('s4').innerHTML =
+                        document.getElementById('w4').value;
+                    document.getElementById('s5').innerHTML =
+                        document.getElementById('w5').value;
+                    document.getElementById('s6').innerHTML =
+                        document.getElementById('w6').value;
+                    document.getElementById('s7').innerHTML =
+                        document.getElementById('w7').value;
+                    document.getElementById('s8').innerHTML =
+                        document.getElementById('w8').value;
+                    document.getElementById('s9').innerHTML =
+                        document.getElementById('w9').value;
+                    document.getElementById('s10').innerHTML =
+                        document.getElementById('w10').value;
+                    document.getElementById('s11').innerHTML =
+                        document.getElementById('w11').value;
+                    document.getElementById('s12').innerHTML =
+                        document.getElementById('w12').value;
+                    document.getElementById('s13').innerHTML =
+                        document.getElementById('w13').value;
+                    document.getElementById('footer').style.display = 'block';
+                     alert(s1,s2);
+                }
+            </script>
+                <button type = "button" value = "Back" onclick = "location.reload(p)">
+                Back </button>
+                    <p>This text taken from Wikidpedia page</p>
+            </div>  <!-- end story div  -->
+                <button onclick = 'location.reload(true)'>Start Again!</button>
+    </body>
+</html>
+
+
+
+
+
+<!--  NOTES:      
+
+*   when hover over HELP, make help list show (like menu, z-index: 3)
+*  single list style
+*  don't do "noun".  instead request "thing", "person", etc...
+  after more skill, you can take the adjective, verb, color, etc... 
+    and apply it to other stories??  one list of words, 
+    tried out in different stories??  That would be unique! 
+*  these should be converted into a loop
+store all answers in an array?  that way we'll have the 
+index # of each answer.  (will it work?)
+
+original section; kept getting writer's block  
+                <p> There once was a little 
+                <span id = "s1"></span> 
+                spider that was born into this world to live a under the big 
+                <span id = "s2"></span> sky.  Being abandoned at a young age, 
+		the spider spent its days searching for food and constantly 
+		re-building its home. </p>
+                <p> It was a kind and generous spider.  It never bothered anybody 
+		and always stayed out of the way when others were around. </p>
+     <span id = "s3"></span>  It found its place at the corner of a house
+
+  what's the css to capitalize the first letter, again?  
+                and got along very well, very quickly.  They became BFFs in no
+                time!</p>
+-->
+
+
+
+
+
+

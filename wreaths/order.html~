@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<!-- order.html  -->
+<!--  important notes at bottom 
+make the buttons fill width of page, 
+one or two rows, so u dont have to zoom to see them
+
+
+ -->
+<head>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet' type='text/css' href='wreaths.css'>
+</head>
+<body>
+    <div id='wrapper'>
+        <div id='nav'>
+            <a href='index.html'><span class='navButton'>HOME</p></a>
+            <a href='gallery.html'><span class='navButton'>GALLERY</p></a>
+            <a href='contact.html'><span class='navButton'>CONTACT</p></a>
+            <a href='order.html'><span class='navButton'>ORDER</p></a>
+            <h3>ORDER</h3>    
+        </div>  <!-- end nav div  -->
+        <p> For now, please send me an email or message me through Facebook.  
+            The order form is not working at the moment. 
+        <p class='contactInfo'>Email: sherryt1023@yahoo.com </p>
+  	    <img id="bizCard" src="wreathBusinessCard.jpeg" />
+        <div id='orderForm'>
+        <form action='' method='post' id='orderForm'>
+            <fieldset>
+                <legend>Wreath Details</legend> <br/>
+                    <label>Event / Theme:</label>
+                    <p> Example:  Birthday, Military, 
+                    Holiday, etc... </p>
+                    <input type='text'> </input>
+                <label>Color(s)</label>
+                <textarea cols=30 rows=5> </textarea>
+                <label>Size(s)</label>
+                    <p>small = 8-10"</p>
+                    <p>med = 10 - 14"</p>
+                    <p>lg = 15 - 20" ish</p>
+                <p>Note: Sizes are approximate.</p> 
+                <p>Cannot guarantee exact size/dimensions</p>
+                <textarea cols=30 rows=5> </textarea>
+                <label>Will this be going in between two doors?</label>
+				<p>like between inside & outside front or back door</p>
+                    <input type='radio' class='radio' id='doorsYes'>Yes</input>
+                    <input type='radio' class='radio' id='doorsNo'>No</input>
+                    <input type='radio' class='radio' id='doorsUnknown'>Not Sure</input>
+                    <br/>
+                <label>Additional Info</label>
+                <textarea cols=30 rows=5> </textarea><br/>
+                <button> Submit </button> 
+            </fieldset>
+        </form>  <!--  end order form  -->
+        <ul id='homeList'>
+            <fieldset>
+                <h2>Perfect for every occasion!</h2><br />
+                <li>Military</li> <li> | </li>
+                <li>Anniversary</li> <li> | </li>
+                <li>Wedding</li> <li> | </li>
+                <li><em>Cheering someone up</em></li> <li> | </li>
+                <li>Congratulations</li> <li> | </li>
+                <li>House-warming Gift</li> <li> | </li>
+                <li>Birthday</li> <li> | </li>
+                <li><em>Every Holiday</em></li> <li> | </li>
+                <li>Many More!</li>
+            </fieldset>
+        </ul>
+
+    </div>  <!--  end wrapper div  -->
+</body>
+</html>
+
+
+
+
+
+<!--     
+
+
+*  have 2 buttons 'order wreath'  'order confections'.
+    when clicked, display:block.
+    allow them to order both, if wanted.
+*  radio buttons for options like size, theme, etc...
+*  text boxes for colors, theme (holiday, military, anniversary, etc..)
+*  event / theme / style? 
+*  holidays? birthdays, anniversary, military, sports, college, any
+celebrations, new baby, congratulations, 
+*  have this form send the info to email sherryt@yahoo.com
+*  eventually, have page start with two options: 'wreath' and 'confections'
+    they can choose both
+    when they select option, THEN the details section pops up.  (starts blank, 
+    only the two options)
+*  
+
+ 
+-->
+
+
+

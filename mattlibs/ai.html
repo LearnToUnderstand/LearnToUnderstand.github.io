@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <link type = "text/css" rel = "stylesheet" href = "mattlib.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Fun and quick ad-lib games.">
+	    <meta name="keywords" content="madlibs, mad libs, adlib, ad lib, funny">
+      	<meta name="author" content="Matthew">
+        <title>AI</title>
+    </head>
+    <body>
+        <span id='top'></span>
+        <div id = 'wrapper'>
+            <a href = 'index.html'>
+                <span class='homeButton'>Home</span>
+            </a>
+            <a href='#helpDiv'>
+                <span class='homeButton'>Help</span>
+            </a>
+            <a href='ai.html'>
+                <span class='homeButton'>Start Again!</span></a><br/>
+            <div id = "formwrapper">
+                <form id = "form">
+                    <label>A type of thing (first thing that comes to mind)</label>
+                    <input id = "w1" type = "text">
+                    <label>A type of animal, plural</label>
+                    <input type = "text" id = "w2">
+                    <label>A thing (plural)</label>
+                    <input type = "text" id = "w3">
+                    <label>A verb</label>
+                    <input type = "text" id = "w4"> 
+                    <label>A verb, ending in "ing"</label>
+                    <input type = "text" id = "w5">
+                    <label>A verb (something silly)</label>
+                    <input type = "text" id = "w6">
+                    <label>A verb, ending in "ing"</label>
+                    <input type = "text" id = "w7"> 
+                    <label>A verb, ending in "ing</label>
+                    <input type = "text" id = "w8">
+                    <label>A year</label>
+                    <input type = "text" id = "w9">
+                    <label>A feeling or emotion</label>
+                    <input type = "text" id = "w10">
+                    <label>Another feeling or emotion</label>
+                    <input type = "text" id = "w11"> 
+                    <label>Verb, ending in "ing"</label>
+                    <input type = "text" id = "w12">
+                    <label>A thing, plural</label>
+                    <input type = "text" id = "w13">
+                    <label>Verb, ending in "ing"<label>
+                    <input type = "text" id = "w14"> 
+                    <label>A feeling or emotion</label>
+                    <input type = "text" id = "w15"> 
+                </form>
+            <button type = "button" onclick = "storytime()"> 
+                LET'S TURN THESE WORDS INTO A STORY!
+            </button>
+            </div>  <!--  end formwrapper div -->
+            <div id = 'story'>
+                <p>Artificial intelligence (AI, also <span id='s1'></span> 
+                intelligence) is intelligence demonstrated by machines, in contrast 
+                to the natural intelligence displayed by <span id='s2'></span> 
+                and other animals.</p>
+                <p> In computer science AI research is defined as the study of 
+                "intelligent <span id='s3'></span>": any device that 
+                <span id='s4'></span>s its environment and takes actions that 
+                maximize its chance of successfully <span id='s5'></span> its goals. 
+                The term "artificial intelligence" is applied when a machine mimics 
+                "<span id='s6'></span>" functions that humans associate with 
+                other human minds, such as "<span id='s7'></span>" and 
+                "<span id='s8'></span>". </p>
+                <p>Artificial intelligence was founded as an academic discipline 
+                in <span id='s9'></span>, and in the years since has experienced 
+                several waves of <span id='s10'></span>, followed by 
+                <span id='s11'></span> and the loss of <span id='s12'></span> 
+                (known as an "AI winter"), followed by new <span id='s13'></span>, 
+                success and renewed <span id='s14'></span>. </p>
+                <p>Bottom line:  AI is the future, it's awesome and it's a bit scary.  We should 
+                all embrace the inevitable and <span id='s15'></span> it. </p>
+            </div>  <!-- end story div  -->
+            <script>
+                function storytime() {
+                    document.getElementById('formwrapper').style.display = 
+                    'none';
+                    document.getElementById('helpDiv').style.display = 
+                    'none';
+                    document.getElementById('story').style.display = 'block';
+                    document.getElementById('s1').innerHTML = 
+                        document.getElementById('w1').value;
+                    document.getElementById('s2').innerHTML =
+                        document.getElementById('w2').value;
+                    document.getElementById('s3').innerHTML =
+                        document.getElementById('w3').value;
+                    document.getElementById('s4').innerHTML =
+                        document.getElementById('w4').value;
+                    document.getElementById('s5').innerHTML =
+                        document.getElementById('w5').value;
+                    document.getElementById('s6').innerHTML =
+                        document.getElementById('w6').value;
+                    document.getElementById('s7').innerHTML =
+                        document.getElementById('w7').value;
+                    document.getElementById('s8').innerHTML =
+                        document.getElementById('w8').value;
+                    document.getElementById('s9').innerHTML =
+                        document.getElementById('w9').value;
+                    document.getElementById('s10').innerHTML =
+                        document.getElementById('w10').value;
+                    document.getElementById('s11').innerHTML =
+                        document.getElementById('w11').value;
+                    document.getElementById('s12').innerHTML =
+                        document.getElementById('w12').value;
+                    document.getElementById('s13').innerHTML =
+                        document.getElementById('w13').value;
+                    document.getElementById('s14').innerHTML =
+                        document.getElementById('w14').value;
+                    document.getElementById('s15').innerHTML =
+                        document.getElementById('w15').value;
+                }
+            </script>
+        <div id = 'helpDiv'> 
+            <hr id='helpDivider'/>
+            <h3>HELP & HINTS</h3><br/>
+            <ul id='helpList'>
+                <li>TIPS:  think outside the box!  With each answer, think of 
+                    scenarios, groups, places and cultures that are not common to you. 
+                <li>NOUN: a person, place or thing.</li>
+                <li>-  Examples:  janitor, ball, house, bathroom, ocean, 
+                    dog, fever... </li><br/><br/>
+                <li>PLURAL NOUN: A person, place or thing, but <em>more than one</em>.</li>
+                <li>-  Examples:  janitors, balls, houses, bathrooms, 
+                    oceans, dogs... </li><br/><br/>
+                <li>ADJECTIVE:  A word that describes a noun.  
+                <li>-  Examples:  fast, hairy, tired, insane, wonderful, 
+                    shiny...</li><br/><br/>
+                <li>VERB:  An action word.  An action you do, or something that is done.
+                <li>-  Hint: DO NOT put "ing" , "s" or "es" on the end.  
+                       (unless that's how it normally is, like "guess, pass, etc...") 
+                    </li>
+                <li>-  Examples:  run, discover, blow, press, yell, think, call
+                    </li><br/><br/>
+                <li>VERB ENDING IN "ING":    
+                <li>-  Examples:  running, discovering, blowing, pressing, 
+                    yelling, galavanting, hallucinating, criticizing, farting, unicycling, ... </li><br/><br/>
+            </ul>
+        </div>  <!-- end helpDiv div  -->            <a href = '#top'>
+            <span class='homeButton' id='home'>Back To Top</span></a>
+        </div> <!--end wrapper div-->
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
