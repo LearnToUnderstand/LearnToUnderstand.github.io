@@ -45,30 +45,87 @@ table {
 
 /* ALL PAGES  */
 
+p {
+    line-height: 2em; 
+}
+
+
+#button {
+    float: left;
+    height: 3em; 
+    width: 6em;  
+}
+
+#button:hover {
+    background-color: yellow; 
+}
+
+
+
+
 body {
     background-color: #191919;
     color: white;
     text-align: center; 
 }
 
+#wrapper {
+    float: center;
+    margin: 10px auto;  
+    width: 90%;
+    text-align: center;  
+}
+
+#banner {
+    background-color: green;
+    height: 9em;    
+    margin: 5px auto; 
+    padding; 5px; 
+}
+
+#logo {
+    background-color: blue;
+    margin: 5px auto; 
+    padding: 1em;  
+    border: red 5px;
+    width: 50px;
+    float: right; 
+    display: block;    
+}
+
+#menuButton {
+    float: left;
+    border: 12px yellow;
+    margin: 5px auto;  
+    background-color: grey;  
+}
+
+#menuExpanded {
+    background-color: #787878; 
+    float: left;
+}
+
 .landingDiv {
-    border: 10px inset black; 
-    margin: 15px auto; 
-    border-radius: 90px; 
-    max-width: 400px; 
-    padding: 25px; 
-    color: white; 
+    border: 0.25em inset black; 
+    margin: 5px auto;
+    float: center; 
+    text-align: center; 
+    border-radius: 15px; 
+    max-width: 30em;  
+    color: #f0f0f0; 
     outline: none; 
     background-color: #bbbbbb; 
 }
 
 h1 {
-    font-size: 55px; 
-    margin: 10px; 
+    font-size: 3em;  
+    margin: 10px auto;
+    line-height: 1.5em;  
 }
 
 h2 {
-    font-size: 40px; 
+    font-size: 2em; 
+    margin: 1em auto; 
 }
 
 a {
@@ -88,6 +145,7 @@ a:hover {
     text-decoration: none; 
     outline: none; 
     border: none; 
+    background-color: #454545;
 }
 
 a:active {
