@@ -49,7 +49,6 @@ p {
     line-height: 2em; 
 }
 
-
 #button {
     float: left;
     height: 3em; 
@@ -60,12 +59,10 @@ p {
     background-color: yellow; 
 }
 
-
-
-
 body {
-    background-color: #191919;
-    color: white;
+    background-color: #555555;
+    /* slightly darker background looks better  */
+    color: black;
     text-align: center; 
 }
 
@@ -157,14 +154,6 @@ a:active {
 br {
     line-height: 2em; 
 }
-
-
-
-
-
-
-
-
 
 
 
