@@ -74,27 +74,29 @@ body {
 }
 
 #banner {
-    background-color: green;
+    background-color: none;
+    border: .1em inset red;
     height: 9em;    
     margin: 5px auto; 
     padding; 5px; 
 }
 
 #logo {
-    background-color: blue;
+    background-color: none;
     margin: 5px auto; 
     padding: 1em;  
-    border: red 5px;
+    border: red 2em;
     width: 50px;
     float: right; 
     display: block;    
 }
+/* logo and button borders aren't working...  */
 
 #menuButton {
     float: left;
-    border: 12px yellow;
+    border: 1em yellow;
     margin: 5px auto;  
-    background-color: grey;  
+    background-color: none;  
 }
 
 #menuExpanded {
@@ -154,6 +156,14 @@ a:active {
 br {
     line-height: 2em; 
 }
+
+
+
+
+
+
+
+
 
 
 
