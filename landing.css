@@ -1,172 +1,202 @@
+/* Simple, clean styles for the Tech Repair & IT Help page */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
- 	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+:root {
+  --bg: #0b1220;
+  --panel: #111a2e;
+  --text: #e9edf7;
+  --muted: #b8c0d9;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #4f7cff;
+  --accent-2: #2ee59d;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
-/* ALL PAGES  */
-
-p {
-    line-height: 2em; 
+* {
+  box-sizing: border-box;
 }
 
-#button {
-    float: left;
-    height: 3em; 
-    width: 6em;  
-    font: .75rem bold serif;
-}
-
-#button:hover {
-    background-color: #444444; 
-}
-
-#button:active + #menuExpanded {
-    display: block;
-    background-color: #007700;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #000000;
-    /* slightly darker background looks better  */
-    color: black;
-    text-align: center; 
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% 10%, rgba(79, 124, 255, 0.25), transparent 60%),
+              radial-gradient(1000px 700px at 90% 20%, rgba(46, 229, 157, 0.18), transparent 55%),
+              var(--bg);
 }
 
-#wrapper {
-    float: center;
-    margin: 10px auto;  
-    width: 90%;
-    text-align: center;  
+/* Layout */
+header, main, footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
-#banner {
-    background-color: none;
-    border: 1rem inset #111111;
-    height: 9em;    
-    margin: 5px auto; 
-    padding; 5px; 
+header {
+  padding-top: 56px;
+  padding-bottom: 28px;
 }
 
-#logo {
-    background-color: none;
-    margin: 5px auto; 
-    padding: 1em;  
-    border: red 2em;
-    width: 50px;
-    float: right; 
-    display: block;    
-}
-/* logo and button borders aren't working...  */
-
-#menuButton {
-    float: left;
-    border: 1em yellow;
-    margin: 5px auto;  
-    background-color: none;  
+main {
+  display: grid;
+  gap: 18px;
+  padding-bottom: 48px;
 }
 
-#menuExpanded {
-    background-color: #787878; 
-    float: left;
-    display: none;
-
+section {
+  background: rgba(17, 26, 46, 0.72);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
 }
 
-.landingDiv {
-    border: 1rem inset #111111; 
-    margin: 5px auto;
-    float: center; 
-    text-align: center; 
-    border-radius: 5px; 
-    max-width: 30em;  
-    font: 1.25rem bold serif; 
-    font-weight: bold;
-    letter-spacing: 2px;
-    outline: none; 
-    background-color: #999999; 
-}
-
+/* Typography */
 h1 {
-    font-size: 3em;  
-    margin: 10px auto;
-    line-height: 1.5em;  
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: 2em; 
-    margin: 1em auto; 
+  font-size: 1.4rem;
+  margin: 0 0 12px;
 }
 
-a {
-    text-decoration: none;  
-    color: black ; 
-    outline: none; 
-    border: none; 
+h3 {
+  font-size: 1.05rem;
+  margin: 0 0 6px;
 }
 
-a:visited {
-    text-decoration: none; 
-    outline: none; 
-    border: none; 
+p {
+  margin: 0 0 12px;
+  color: var(--muted);
 }
 
-a:hover {
-    text-decoration: none; 
-    outline: none; 
-    border: none; 
-    background-color: #454545;
+ul, ol {
+  margin: 10px 0 0 18px;
+  color: var(--text);
 }
 
-a:active {
-    text-decoration: none; 
-    outline: none; 
-    border: none; 
+li {
+  margin: 8px 0;
 }
 
-br {
-    line-height: 2em; 
+/* Header CTA */
+header p {
+  max-width: 60ch;
+  margin-bottom: 18px;
 }
 
+header a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0b1220;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(79, 124, 255, 0.22);
+  transition: transform 160ms ease, filter 160ms ease;
+}
 
+header a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
 
+/* Services list */
+#services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
 
+#services li {
+  margin: 0;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+#services p {
+  margin: 0;
+}
+
+/* Contact form */
+form {
+  margin-top: 12px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: var(--text);
+}
+
+input, textarea {
+  width: min(560px, 100%);
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--text);
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(233, 237, 247, 0.5);
+}
+
+input:focus, textarea:focus {
+  border-color: rgba(79, 124, 255, 0.8);
+  box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.15);
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #0b1220;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* Footer */
+footer {
+  padding-top: 0;
+  padding-bottom: 34px;
+  color: rgba(233, 237, 247, 0.6);
+}
+
+footer small {
+  display: block;
+  text-align: center;
+}
+
+/* Responsive tweaks */
+@media (min-width: 760px) {
+  main {
+    gap: 22px;
+  }
+
+  #services ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
