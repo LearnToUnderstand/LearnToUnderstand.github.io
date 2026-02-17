@@ -24,6 +24,10 @@ a:link {
   color: lightblue;
 }
 
+a:visited {
+  color: lightpurple;
+}
+
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.55;
