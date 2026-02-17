@@ -1,221 +1,269 @@
-/* Cogmind-inspired: dark CRT + neon accents (more visible links) */
+/* style.css — Cogmind-inspired (dark CRT + neon green/cyan highlights)
+   Works with your existing pages, including the Services list where <a> wraps the whole <li>.
+*/
 
-:root {
-  --bg: #050608;                 /* near-black */
-  --panel: rgba(12, 14, 18, 0.88);
-  --text: #d7f6df;               /* pale green-white */
-  --muted: #86b494;              /* muted green */
-  --border: rgba(46, 252, 90, 0.18);
+:root{
+  --bg0:#040606;
+  --bg1:#070a09;
+  --panel:rgba(8,12,10,.88);
 
-  --accent: #33d6ff;             /* neon cyan (links/CTA) */
-  --accent-2: #00ff00;           /* neon green (hover/success) */
-  --visited: #c26bff;            /* neon purple (visited links) */
-  --warn: #ffb000;               /* amber highlight */
+  --text:#d9ffe2;
+  --muted:#8fcfa2;
 
-  --shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+  --grid:rgba(46,252,90,.08);
+  --border:rgba(46,252,90,.22);
+
+  --green:#2efc5a;   /* “Cogmind green” */
+  --cyan:#33d6ff;    /* neon cyan */
+  --purple:#c26bff;  /* visited */
+  --amber:#ffb000;   /* accent / CTA */
+
+  --shadow:0 14px 34px rgba(0,0,0,.60);
+  --glow:0 0 18px rgba(46,252,90,.20);
 }
 
-* { box-sizing: border-box; }
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
+body{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  line-height:1.6;
+  color:var(--text);
 
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.55;
-  color: var(--text);
-
-  /* subtle “terminal / CRT” background */
+  /* CRT-ish background: subtle grid + scanlines + vignette */
   background:
-    radial-gradient(900px 600px at 15% 10%, rgba(46, 252, 90, 0.10), transparent 55%),
-    radial-gradient(800px 600px at 90% 15%, rgba(51, 214, 255, 0.10), transparent 55%),
-    linear-gradient(transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%),
-    var(--bg);
-  background-size: auto, auto, 100% 6px, auto; /* light scanline vibe */
+    radial-gradient(900px 600px at 20% 10%, rgba(46,252,90,.10), transparent 55%),
+    radial-gradient(800px 600px at 90% 15%, rgba(51,214,255,.10), transparent 55%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0px, rgba(255,255,255,.035) 1px, transparent 3px, transparent 6px),
+    linear-gradient(to bottom, rgba(0,0,0,.35), transparent 20%, transparent 80%, rgba(0,0,0,.45)),
+    /* grid */
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  background-size:
+    auto, auto,
+    100% 6px,
+    auto,
+    28px 28px,
+    28px 28px,
+    auto;
+  background-attachment: fixed;
+}
+
+::selection{
+  background: rgba(51,214,255,.35);
+  color: var(--text);
 }
 
 /* Layout */
-header, main, footer {
+header, main, footer{
   max-width: 980px;
   margin: 0 auto;
   padding: 24px;
 }
 
-header {
+header{
   padding-top: 56px;
   padding-bottom: 28px;
 }
 
-main {
-  display: grid;
-  gap: 18px;
-  padding-bottom: 48px;
-}
-
-section {
+/* Panels/sections */
+section{
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 20px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow), var(--glow);
   backdrop-filter: blur(6px);
 }
 
+main{
+  display:grid;
+  gap: 18px;
+  padding-bottom: 48px;
+}
+
 /* Typography */
-h1 {
+h1{
+  margin:0 0 10px;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  margin: 0 0 10px;
-  letter-spacing: -0.02em;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-shadow: 0 0 14px rgba(46,252,90,.18);
 }
 
-h2 {
-  font-size: 1.4rem;
-  margin: 0 0 12px;
+h2{
+  margin:0 0 12px;
+  font-size: 1.35rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
 }
 
-h3 {
+h3{
+  margin:0 0 6px;
   font-size: 1.05rem;
-  margin: 0 0 6px;
+  letter-spacing: .02em;
 }
 
-p {
+p{
   margin: 0 0 12px;
   color: var(--muted);
 }
 
-ul, ol {
+ul, ol{
   margin: 10px 0 0 18px;
   color: var(--text);
 }
 
-li { margin: 8px 0; }
+li{ margin: 8px 0; }
 
-/* Links (more visible) */
-a:link {
-  color: var(--accent);
+/* Links */
+a:link{
+  color: var(--cyan);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-
-a:visited {
-  color: var(--visited);
-}
-
-a:hover {
-  color: var(--accent-2);
+a:visited{ color: var(--purple); }
+a:hover{
+  color: var(--green);
   text-decoration-thickness: 2px;
 }
-
-a:focus {
-  outline: 2px solid rgba(51, 214, 255, 0.65);
+a:focus{
+  outline: 2px solid rgba(51,214,255,.7);
   outline-offset: 3px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-/* Header CTA */
-header p {
-  max-width: 60ch;
-  margin-bottom: 18px;
-}
-
-header a {
-  display: inline-block;
-  text-decoration: none;
-  color: #041006;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+/* Header CTA button */
+header a[href="#contact"]{
+  display:inline-block;
+  text-decoration:none;
+  color:#090a06;
+  background: linear-gradient(135deg, var(--amber), var(--green));
   padding: 10px 14px;
   border-radius: 12px;
   font-weight: 800;
-  box-shadow: 0 10px 24px rgba(51, 214, 255, 0.18);
+  letter-spacing: .02em;
+  box-shadow: 0 12px 24px rgba(255,176,0,.14);
   transition: transform 160ms ease, filter 160ms ease;
 }
-
-header a:hover {
+header a[href="#contact"]:hover{
   transform: translateY(-2px);
-  filter: brightness(1.07);
+  filter: brightness(1.06);
 }
 
-/* Services list */
-#services ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
+/* Nav (on about/links pages) */
+nav{
+  margin-top: 10px;
+  color: var(--muted);
+}
+nav a{
+  text-decoration:none;
+  border-bottom: 1px solid rgba(51,214,255,.35);
+}
+nav a:hover{
+  border-bottom-color: rgba(46,252,90,.75);
+}
+
+/* SERVICES grid + full-tile clickable cards */
+#services ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
   gap: 12px;
 }
 
-#services li {
-  margin: 0;
-  padding: 14px;
+#services li{
+  margin:0;
+  padding:0;
   border-radius: 14px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255,255,255,.02);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  overflow: hidden; /* keeps the <a> glow clipped nicely */
 }
 
-#services p { margin: 0; }
+/* Because your <a> wraps the content inside each <li>,
+   this makes the entire tile clickable. */
+#services li > a{
+  display:block;
+  padding: 14px;
+  text-decoration:none;
+  color: var(--text);
+}
+#services li > a p{
+  margin:0;
+  color: var(--muted);
+}
 
-/* Contact form */
-form { margin-top: 12px; }
+/* Tile hover glow */
+#services li:hover{
+  border-color: rgba(46,252,90,.55);
+  box-shadow: 0 0 22px rgba(46,252,90,.18);
+}
+#services li:hover > a{
+  background: rgba(46,252,90,.05);
+}
+#services li:hover > a h3{
+  color: var(--green);
+}
 
-label {
-  display: block;
+/* Forms */
+form{ margin-top: 12px; }
+label{
+  display:block;
   font-weight: 700;
   color: var(--text);
 }
 
-input, textarea {
+input, textarea{
   width: min(560px, 100%);
   margin-top: 6px;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.40);
+  border: 1px solid rgba(46,252,90,.25);
+  background: rgba(0,0,0,.45);
   color: var(--text);
-  outline: none;
+  outline:none;
 }
-
-input::placeholder, textarea::placeholder {
-  color: rgba(215, 246, 223, 0.45);
+input::placeholder, textarea::placeholder{
+  color: rgba(217,255,226,.45);
 }
-
-input:focus, textarea:focus {
-  border-color: rgba(46, 252, 90, 0.55);
-  box-shadow: 0 0 0 4px rgba(46, 252, 90, 0.12);
+input:focus, textarea:focus{
+  border-color: rgba(51,214,255,.65);
+  box-shadow: 0 0 0 4px rgba(51,214,255,.12);
 }
 
 /* Buttons */
-button {
-  border: 1px solid rgba(51, 214, 255, 0.35);
+button{
+  border: 1px solid rgba(255,176,0,.35);
   border-radius: 12px;
   padding: 10px 14px;
   font-weight: 800;
-  cursor: pointer;
-  color: #041006;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  cursor:pointer;
+  color:#090a06;
+  background: linear-gradient(135deg, var(--amber), var(--green));
   transition: transform 160ms ease, filter 160ms ease;
 }
-
-button:hover {
+button:hover{
   transform: translateY(-2px);
   filter: brightness(1.06);
 }
 
 /* Footer */
-footer {
+footer{
   padding-top: 0;
   padding-bottom: 34px;
-  color: rgba(215, 246, 223, 0.65);
+  color: rgba(217,255,226,.65);
+}
+footer small{
+  display:block;
+  text-align:center;
 }
 
-footer small {
-  display: block;
-  text-align: center;
-}
-
-/* Responsive tweaks */
-@media (min-width: 760px) {
-  main { gap: 22px; }
-  #services ul { grid-template-columns: 1fr 1fr; }
+/* Responsive */
+@media (min-width: 760px){
+  main{ gap: 22px; }
+  #services ul{ grid-template-columns: 1fr 1fr; }
 }
