@@ -97,33 +97,48 @@
       <section id="contact">
         <h2>Contact</h2>
         <p>THIS FORM IS NOT CURRENTLY WORKING.  PLEASE SEND A TEXT OR LEAVE A MESSAGE AT THE PHONE NUMBER BELOW. </p>
+<form action="https://api.web3forms.com/submit" method="POST">
+  <!-- Required: Web3Forms access key -->
+  <input type="hidden" name="access_key" value="5207705f-205a-4526-94ac-6404e1f0692e" />
 
-        <form>
-          <label>
-            Name<br />
-            <input type="text" name="name" placeholder="Your name" required />
-          </label>
-          <br /><br />
+  <!-- Optional: Email subject line -->
+  <input type="hidden" name="subject" value="New website message" />
 
-          <label>
-            Email<br />
-            <input type="email" name="email" placeholder="you@example.com" required />
-          </label>
-          <br /><br />
+  <!-- Optional: Redirect after successful submit (must be full URL) -->
+  <input
+    type="hidden"
+    name="redirect"
+    value="YOUR_GITHUB_PAGES_THANK_YOU_URL"
+  />
 
-          <label>
-            What do you need help with?<br />
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Describe the issue or what you’re looking for..."
-              required
-            ></textarea>
-          </label>
-          <br /><br />
+  <!-- Recommended anti-spam honeypot (keep hidden) -->
+  <input type="checkbox" name="botcheck" style="display:none;" />
 
-          <button type="submit">Send</button>
-        </form>
+  <label>
+    Name<br />
+    <input type="text" name="name" placeholder="Your name" required />
+  </label>
+  <br /><br />
+
+  <label>
+    Email<br />
+    <input type="email" name="email" placeholder="you@example.com" required />
+  </label>
+  <br /><br />
+
+  <label>
+    Message<br />
+    <textarea
+      name="message"
+      rows="5"
+      placeholder="Describe what you need help with..."
+      required
+    ></textarea>
+  </label>
+  <br /><br />
+
+  <button type="submit">Send</button>
+</form>
         <br /> <br />
         <p>
           Phone:  <strong>(574) 213-5168</strong><br /><br />
